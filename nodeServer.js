@@ -1,6 +1,7 @@
 // Node.js 18 veya daha yeni sürüm
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 8080
 
 app.get('/', async (req, res) => {
   const targetUrl = req.query.url; // Renamed for clarity from 'url'
@@ -23,4 +24,4 @@ app.get('/', async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Proxy sunucusu http://localhost:3000 üzerinde çalışıyor'));
+app.listen(port, () => console.log('Proxy sunucusu port 8080 üzerinde çalışıyor'));

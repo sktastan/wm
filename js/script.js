@@ -6,7 +6,7 @@ async function fetchAndDisplayProductInfo() {
     
     // Construct the URL for your proxy server.
     // The targetSiteUrl needs to be URI encoded to be safely passed as a query parameter.
-    const proxyRequestUrl = `http://localhost:3000/?url=${encodeURIComponent(targetSiteUrl)}`;
+    const proxyRequestUrl = `http://localhost:8080/?url=${encodeURIComponent(targetSiteUrl)}`;
 
     console.log("Client attempting to fetch from proxy with URL:", proxyRequestUrl); // Log the URL
 
